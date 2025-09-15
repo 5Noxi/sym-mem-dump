@@ -45,7 +45,7 @@ The tool was partly used for [wpr-reg-records](https://github.com/5Noxi/wpr-reg-
 
 ## Dump Procedure
 
-The tool starts a local kernel debugging session for each phase, which means that it has to run `.reload /f` (the `.reload` command deletes all symbol information for the specified module and reloads these symbols as needed. In some cases, this command also reloads or unloads the module itself) in each new session, which is time consuming. I may change it in the future:
+The tool starts a local kernel debugging session for each phase, which means that it has to run `.reload /f` (the `.reload` command deletes all symbol information for the specified module and reloads these symbols as needed. In some cases, this command also reloads or unloads the module itself) in each new session, which is time consuming. I may change it in the future. Dumping a module that includes many symbols it can take some time to go trough each phase. E.g., the `nt` module can take up to `50` minutes.
 ```ps
 -kl # Starts a kernel debugging session on the same machine as the debugger.
 .reload /f # Forces the debugger to immediately load the symbols. This parameter overrides lazy symbol loading. For more information, see the following Remarks section.
