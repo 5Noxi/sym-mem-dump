@@ -67,6 +67,7 @@ There are two other ways to specify the value (the L Size range specifier):
 - L? Size (with a question mark) means the same as L Size, except that L? Size removes the debugger's automatic range limit. Typically, there is a range limit of 256 MB, because larger ranges are typographic errors. If you want to specify a range that is larger than 256 MB, you must use the L? Size syntax.
 - L- Size (with a hyphen) specifies a range of length Size that ends at the given address. For example, 80000000 L20 specifies the range from 0x80000000 through 0x8000001F, and 80000000 L-20 specifies the range from 0x7FFFFFE0 through 0x7FFFFFFF. // l1 = display one unit of data at the specified address
 ```
+If you want to display memory differently with a increased range of length Size, use `New KD Session`.
 > [address-and-address-range-syntax.md | windows-driver-docs](https://github.com/5Noxi/windows-driver-docs/blob/staging/windows-driver-docs-pr/debuggercmds/address-and-address-range-syntax.md)  
 > [display-memory | windows-driver-docs](https://github.com/5Noxi/windows-driver-docs/blob/staging/windows-driver-docs-pr/debuggercmds/d--da--db--dc--dd--dd--df--dp--dq--du--dw--dw--dyb--dyd--display-memor.md)  
 
