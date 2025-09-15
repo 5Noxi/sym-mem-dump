@@ -32,6 +32,17 @@ winget install Microsoft.WinDbg --accept-package-agreements --accept-source-agre
 ```
 > [Winget Install | windows-dev-docs](https://github.com/5Noxi/windows-dev-docs/blob/docs/hub/package-manager/winget/install.md)  
 
+## GUI Buttons
+| Button            | Description                                                                                           |
+|-------------------|-------------------------------------------------------------------------------------------------------|
+| `New KD Session` | Starts a new Kernel Debugging (KD) session with the `-kl` parameter.                                  |
+| `Remove Dumps`   | Removes all folders in `$env:localappdata\Noverse\Symbols`.                                           |
+| `Reload Modules` | Reloads all modules using `.reload /f`, then lists the loaded modules with `lm`.                      |
+| `Phase Folder`    | Opens `$env:localappdata\Noverse\Symbols`. Each `.txt` file is saved in its respective module folder. |
+| `Dump`           | Runs through all dump phases using the currently selected module.                                     |
+
+## Dump Procedure
+
 The tool starts a local kernel debugging session for each phase, which means that it has to run `.reload /f` (the `.reload` command deletes all symbol information for the specified module and reloads these symbols as needed. In some cases, this command also reloads or unloads the module itself) in each new session, which is time consuming. I may change it in the future:
 ```ps
 -kl # Starts a kernel debugging session on the same machine as the debugger.
@@ -83,12 +94,6 @@ fffff804`d13c66e0  00000000
 KiReservedCpuSets <> 00000000
 ```
 The final output is `module-Dump.txt`.
-
-`New KD Session` - Starts new KD session with `-kl` parameter
-`Remove Dumps` - Removes all folders in `$env:localappdata\Noverse\Symbols`
-`Reload Modules` - Reloads the modules with `.reload /f`, afterwards lists the loaded modules with `lm`
-`Phase Folder` - Opens `$env:localappdata\Noverse\Symbols`, each `.txt` file gets saved in the module folder
-`Dump` - Goes through the phases using the selected module
 
 Miscellaneous references:
 > https://github.com/5Noxi/windows-driver-docs/blob/staging/windows-driver-docs-pr/debugger/symbol-path.md  
