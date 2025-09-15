@@ -98,6 +98,8 @@ fffff804`d13c66e0  00000000
 KiReservedCpuSets <> 00000000
 ```
 The final output is `module-Dump.txt`.
+> [!CAUTION]
+> It might not work if selecting a length `8 <`.
 
 Miscellaneous references:
 > https://github.com/5Noxi/windows-driver-docs/blob/staging/windows-driver-docs-pr/debugger/symbol-path.md  
