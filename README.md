@@ -7,7 +7,7 @@ kd is a kernel-mode debugger based on a console user interface.
 WinDbg can be used as a user-mode or kernel-mode debugger, but not both at the same time.
 It provides a GUI for the user.
 ```
-> [Windows Internals P7](https://github.com/5Noxi/windows-books/releases)  
+> [Windows Internals E7](https://github.com/5Noxi/windows-books/releases)  
 
 Preview:
 
