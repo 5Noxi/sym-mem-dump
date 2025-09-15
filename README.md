@@ -38,7 +38,7 @@ winget install Microsoft.WinDbg --accept-package-agreements --accept-source-agre
 | `New KD Session` | Starts a new Kernel Debugging (KD) session with the `-kl` parameter.                                  |
 | `Remove Dumps`   | Removes all folders in `$env:localappdata\Noverse\Symbols`.                                           |
 | `Reload Modules` | Reloads all modules using `.reload /f`, then lists the loaded modules with `lm`.                      |
-| `Phase Folder`    | Opens `$env:localappdata\Noverse\Symbols`. Each `.txt` file is saved in its respective module folder. |
+| `Phase Folder`    | Opens `$env:localappdata\Noverse\Symbols`.<br>Each `.txt` file is saved in its respective module folder. |
 | `Dump`           | Runs through all dump phases using the currently selected module.                                     |
 
 ## Dump Procedure
