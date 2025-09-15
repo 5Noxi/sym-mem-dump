@@ -30,7 +30,8 @@ iwr get.scoop.sh -OutFile "$env:temp\Scoop.ps1"; powershell -File "$env:temp\Sco
 scoop install winget
 winget install Microsoft.WinDbg --accept-package-agreements --accept-source-agreements
 ```
-> [Winget Install | windows-dev-docs](https://github.com/5Noxi/windows-dev-docs/blob/docs/hub/package-manager/winget/install.md)  
+> [Winget Install | windows-dev-docs](https://github.com/5Noxi/windows-dev-docs/blob/docs/hub/package-manager/winget/install.md)
+
 The tool was partly used for [wpr-reg-records](https://github.com/5Noxi/wpr-reg-records#kernel-values) (`nt` module).
 
 ## GUI Buttons
