@@ -37,11 +37,13 @@ The tool was partly used for [wpr-reg-records](https://github.com/5Noxi/wpr-reg-
 ## GUI Buttons
 | Button            | Description                                                                                           |
 |-------------------|-------------------------------------------------------------------------------------------------------|
-| `New KD Session` | Starts a new Kernel Debugging (KD) session with the `-kl` parameter.                                  |
-| `Remove Dumps`   | Removes all folders in `$env:localappdata\Noverse\Symbols`.                                           |
-| `Reload Modules` | Reloads all modules using `.reload /f`, then lists the loaded modules with `lm`.                      |
-| `Phase Folder`    | Opens `$env:localappdata\Noverse\Symbols`.<br>Each `.txt` file is saved in its respective module folder. |
-| `Dump`           | Runs through all dump phases using the currently selected module.                                     |
+| `New KD Session` | Starts a new Kernel Debugging (KD) session with the `-kl` parameter                                  |
+| `Remove Dumps`   | Removes all folders in `$env:localappdata\Noverse\Symbols`                                           |
+| `Reload Modules` | Reloads all modules using `.reload /f`, then lists the loaded modules with `lm`                      |
+| `Phase Folder`    | Opens `$env:localappdata\Noverse\Symbols`<br>Each `.txt` file is saved in its respective module folder |
+| `Dump`           | Runs through all dump phases using the currently selected module                                     |
+| `1`           | Specifies the range of length size, default is `1`                                 |
+| `dd`           | Displays the current [`Display Memory`](https://github.com/5Noxi/windows-driver-docs/blob/staging/windows-driver-docs-pr/debuggercmds/d--da--db--dc--dd--dd--df--dp--dq--du--dw--dw--dyb--dyd--display-memor.md) command |
 
 ## Dump Procedure
 
