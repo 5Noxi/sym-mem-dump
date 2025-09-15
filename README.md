@@ -9,6 +9,10 @@ It provides a GUI for the user.
 ```
 > [Windows Internals P7](https://github.com/5Noxi/windows-books/releases)  
 
+Preview:
+
+https://github.com/user-attachments/assets/78e67add-6a25-4d49-b60e-d743f9ce492d
+
 Modules are kernel files or drivers loaded into memory with code and data, you can get detailed information about a module with:
 ```ps
 !lmi Module
@@ -42,7 +46,7 @@ The tool was partly used for [wpr-reg-records](https://github.com/5Noxi/wpr-reg-
 | `Reload Modules` | Reloads all modules using `.reload /f`, then lists the loaded modules with `lm`                      |
 | `Phase Folder`    | Opens `$env:localappdata\Noverse\Symbols`<br>Each `.txt` file is saved in its respective module folder |
 | `Dump`           | Runs through all dump phases using the currently selected module                                     |
-| `1`           | Specifies the range of length size, default is `1`                                 |
+| `1`           | Specifies the range of length size, default is `1`, it might not work properly with a length of `8 <`.                                 |
 | `dd`           | Displays the current [`Display Memory`](https://github.com/5Noxi/windows-driver-docs/blob/staging/windows-driver-docs-pr/debuggercmds/d--da--db--dc--dd--dd--df--dp--dq--du--dw--dw--dyb--dyd--display-memor.md) command |
 
 ## Dump Procedure
@@ -98,8 +102,6 @@ fffff804`d13c66e0  00000000
 KiReservedCpuSets <> 00000000
 ```
 The final output is `module-Dump.txt`.
-> [!CAUTION]
-> It might not work if selecting a length `8 <`.
 
 Miscellaneous references:
 > https://github.com/5Noxi/windows-driver-docs/blob/staging/windows-driver-docs-pr/debugger/symbol-path.md  
