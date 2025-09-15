@@ -53,11 +53,11 @@ x [Options] Module!Symbol
 > [x--examine-symbols-.md | windows-driver-docs](https://github.com/5Noxi/windows-driver-docs/blob/staging/windows-driver-docs-pr/debuggercmds/x--examine-symbols-.md)  
 
 Output will now looks like:
-```ps
+```c
 fffff804`d13c66e0 nt!KiReservedCpuSets = <no type information>
 ```
 Now `module-Symbols.txt` gets filtered (output `module-Filtered.txt`), removes header/footer lines, removes symbols `('$mod!(?:_xmm|write_char|write_string|write_multi_char|chunkset_core|ReadString|\s\?\?)'`, `<no type information>`, `parentheses` (not needed anymore since it uses `/1`, but I'll leave it for safety) and it places the symbol into the command:
-```ps
+```c
 dd symbol l1
 ```
 ```c
