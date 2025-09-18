@@ -90,7 +90,7 @@ If you want to display memory differently with a increased range of length Size,
 > [address-and-address-range-syntax.md | windows-driver-docs](https://github.com/5Noxi/windows-driver-docs/blob/staging/windows-driver-docs-pr/debuggercmds/address-and-address-range-syntax.md)  
 > [display-memory | windows-driver-docs](https://github.com/5Noxi/windows-driver-docs/blob/staging/windows-driver-docs-pr/debuggercmds/d--da--db--dc--dd--dd--df--dp--dq--du--dw--dw--dyb--dyd--display-memor.md)  
 
-![dismem](https://github.com/5Noxi/sym-mem-dump/blob/main/dismem.png?raw=true)
+![](https://github.com/5Noxi/sym-dump/blob/main/images/dismem.png?raw=true)
 
 `module-Filtered.txt` gets pasted into a KD session, output gets dynamically saved in `module-KD.txt`). The KD window gets opened in the background (minimized), you can open it whenever you want to see the output:
 ```c
